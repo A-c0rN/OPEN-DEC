@@ -12,3 +12,11 @@ sudo apt install multimon-ng ffmpeg sox
 This will install all needed dependancies.
 
 # Operation:
+To use this program, run `./relay` in your terminal. If you have pulse audio, alongside PAVU control, you can redirect audio to this application using the "Multimon-NG" recording instance.
+Apon recieving proper SAME Encoded headers, this program will decode and re-encode it's own.
+
+To encode your own message, run `./encode`, and follow all prompts on screen. This will encode and relay a proper SAME message.
+
+# Credits
+Credits where credits are due:
+ - Original Project: ElijahHamilton/OPEN-DEC

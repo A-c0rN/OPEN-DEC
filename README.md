@@ -11,6 +11,10 @@ sudo apt install multimon-ng ffmpeg sox
 
 This will install all needed dependancies.
 
+Choose where you would like to install this application, and run `git clone https://github.com/A-c0rN/OPEN-DEC.git`.
+
+CD into OPEN-DEC, and type `sudo chmod +x * bin/*`. This makes all applications executable.
+
 # Operation:
 To use this program, run `./relay` in your terminal. If you have pulse audio, alongside PAVU control, you can redirect audio to this application using the "Multimon-NG" recording instance.
 Apon recieving proper SAME Encoded headers, this program will decode and re-encode it's own.

@@ -1,0 +1,19 @@
+echo "MONITOR"
+while :
+    do
+    if grep -q -e NNNN data.txt; then
+    killall -9 multimon-ng
+    exit
+    fi
+    if grep -q -e ZCZC data.txt; then
+    killall -9 multimon-ng
+    sed -e 's/EAS: //g' data.txt > data1.txt
+    rm data.txt
+    mv data1.txt data.txt
+    DATA=$(cat "data.txt")
+    ./relay "$DATA"
+	./dasdec
+    exit
+    fi
+done
+

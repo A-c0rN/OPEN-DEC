@@ -1,0 +1,7 @@
+echo "DASDEC"
+while :
+    do
+    ./demod &
+    ./monitor
+done
+

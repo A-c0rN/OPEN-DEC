@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cd bin
+read -p 'Enter event code (Ex. TOR, DMO, Ect.): ' eventCode
+read -p 'Enter FIPS code/s: (Dash Seperated): ' fipsCode
+read -p 'Enter duration (HHMM): " timeStamp
+./message
+./encode $eventCode $fipsCode $timeStamp
+move message.txt ..

@@ -1,4 +1,3 @@
-echo "DEMOD"
+# echo "DEMOD"
 rm -f data.txt
 multimon-ng -q -a EAS > data.txt
-

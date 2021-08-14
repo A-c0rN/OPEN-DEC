@@ -5,6 +5,6 @@ read -p 'Enter event code (Ex. TOR, DMO, Ect.): ' eventCode
 read -p 'Enter FIPS code/s: (Dash Seperated): ' fipsCode
 read -p 'Enter duration (HHMM): ' timeStamp
 read -p 'Enter Message to send: ' messageText
-./message $messageText
+echo "$messageText" > message.txt
 ./encode $eventCode $fipsCode $timeStamp
 move message.txt ..

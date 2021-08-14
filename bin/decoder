@@ -1,4 +1,4 @@
-echo "DASDEC"
+# echo "DECODER"
 while :
     do
     ./demod &

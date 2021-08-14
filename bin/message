@@ -1,3 +1,3 @@
-echo "MESSAGE"
+# echo "MESSAGE"
 echo "enter message/description. close press ctrl+c to finish."
 cat > message.txt

@@ -13,7 +13,7 @@ This will install all needed dependancies.
 
 Choose where you would like to install this application, and run `git clone https://github.com/A-c0rN/OPEN-DEC.git`.
 
-CD into OPEN-DEC, and type `sudo chmod +x * bin/*`. This makes all applications executable.
+CD into OPEN-DEC, and type `sudo chmod +x * && cd bin && sudo chmod +x *`. This makes all applications executable.
 
 # Operation:
 To use this program, run `./relay` in your terminal. If you have pulse audio, alongside PAVU control, you can redirect audio to this application using the "Multimon-NG" recording instance.

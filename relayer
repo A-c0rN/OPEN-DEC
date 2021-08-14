@@ -1,0 +1,4 @@
+#!/bin/bash
+cd bin
+echo "Feel free to minimize this window. It will continue to operate."
+./start

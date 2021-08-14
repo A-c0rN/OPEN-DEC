@@ -10,6 +10,7 @@ sox input.wav -r 44100 output.wav
 rm -f input.wav
 rm -f header.wav
 sox -q headers.wav attention.wav output.wav NNNN.wav -r 44100 relay.wav
+aplay relay.wav
 rm -f relay.wav
 rm -f headers.wav
 rm -f output.wav

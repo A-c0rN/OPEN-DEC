@@ -1,2 +1,2 @@
-echo "START"
-./dasdec
+# echo "START"
+./decoder

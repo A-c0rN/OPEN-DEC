@@ -1,15 +1,12 @@
-echo "ENCODE"
+# echo "ENCODE"
 DATA=$(echo -n ZCZC-EAS-$1-$2+$3- && echo -n `date +"%j"` && echo -n `date -u +"%H%M"` && echo -n -OPEN-DEC-)
 echo $DATA
 echo $DATA | minimodem -q --tx same -v 0.6 -R 44100 -f header.wav
 sox -q silence.wav tone1.wav header.wav tone2.wav silence.wav tone1.wav header.wav tone2.wav silence.wav tone1.wav header.wav tone2.wav silence.wav -r 44100 headers.wav highpass 1000 highpass 1000 lowpass 3000 lowpass 3000
-echo "NNNN" | minimodem -q --tx same -v 0.6 -R 44100 -f NNNN1.wav
-sox -q silence.wav tone1.wav NNNN1.wav tone2.wav silence.wav tone1.wav NNNN1.wav tone2.wav silence.wav tone1.wav NNNN1.wav tone2.wav silence.wav -r 44100 NNNN.wav highpass 1000 highpass 1000 lowpass 3000 lowpass 3000
 ./proc $DATA > message2.txt
 cat message2.txt message.txt > message3.txt
 flite --setf int_f0_target_stddev=25 --setf int_f0_target_mean=115 -f message3.txt -o input.wav
 sox input.wav -r 44100 output.wav
-rm -f NNNN1.wav
 rm -f input.wav
 rm -f header.wav
 sox -q headers.wav attention.wav output.wav NNNN.wav -r 44100 relay.wav

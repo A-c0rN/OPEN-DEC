@@ -1,4 +1,4 @@
-echo "MONITOR"
+# echo "MONITOR"
 while :
     do
     if grep -q -e NNNN data.txt; then
@@ -12,7 +12,7 @@ while :
     mv data1.txt data.txt
     DATA=$(cat "data.txt")
     ./relay "$DATA"
-	./dasdec
+	./decoder
     exit
     fi
 done
